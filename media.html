@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="LOGO MASTER-ICON-1.png">
+  <link rel="apple-touch-icon" href="LOGO MASTER-ICON-1.png">
+  <title>Media | R9 International</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Background konsisten */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(80,0,0,0.55)
+      ), url('./bg-r9.png');
+      background-size: cover;
+      background-position: center;
+      filter: blur(4px);
+      transform: scale(1.05);
+      z-index: -1;
+    }
+
+    /* Fade animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-page {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    /* Ripple effect */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      background: rgba(255,255,255,0.4);
+      animation: ripple-animation 0.6s linear;
+      pointer-events: none;
+    }
+
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center text-white px-4">
+
+  <div class="w-full max-w-xl text-center px-6 py-10 bg-black/60 backdrop-blur-md rounded-2xl shadow-2xl animate-page">
+
+    <!-- Logo -->
+    <div class="mb-6">
+      <img src="LOGO MASTER-ICON-1.png"
+           alt="R9 Logo"
+           class="w-44 sm:w-52 md:w-64 h-auto mx-auto drop-shadow-2xl" />
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-wide mb-4">
+      REIGN 9 MEDIA
+    </h1>
+
+    <p class="text-sm text-gray-300 mb-10">
+      Follow our official channels and stay connected with the Reign.
+    </p>
+
+    <!-- Buttons -->
+    <div class="space-y-4">
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/reignnine"
+         target="_blank"
+         class="ripple-btn relative overflow-hidden block w-full bg-black transition duration-150 rounded-2xl py-4 font-semibold shadow-lg text-center transform active:scale-95 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/50">
+
+        <span class="flex items-center justify-center gap-2">
+          <i class="fab fa-instagram text-pink-400"></i>
+          <span class="btn-text">FOLLOW ON INSTAGRAM</span>
+        </span>
+
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://tiktok.com/@reignnine"
+         target="_blank"
+         class="ripple-btn relative overflow-hidden block w-full bg-black transition duration-150 rounded-2xl py-4 font-semibold shadow-lg text-center transform active:scale-95 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/50">
+
+        <span class="flex items-center justify-center gap-2">
+          <i class="fab fa-tiktok text-cyan-300"></i>
+          <span class="btn-text">FOLLOW ON TIKTOK</span>
+        </span>
+
+      </a>
+
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-10">
+      <a href="index.html"
+         class="inline-block bg-black hover:bg-red-700 transition duration-150 rounded-2xl px-6 py-3 font-semibold shadow-lg transform active:scale-95">
+        ← Back to Lobby
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+
+    // Ripple effect
+    document.querySelectorAll('.ripple-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+
+        const circle = document.createElement('span');
+        circle.classList.add('ripple');
+
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+
+        circle.style.width = size + 'px';
+        circle.style.height = size + 'px';
+
+        circle.style.left = e.clientX - rect.left - size / 2 + 'px';
+        circle.style.top = e.clientY - rect.top - size / 2 + 'px';
+
+        button.appendChild(circle);
+
+        setTimeout(() => {
+          circle.remove();
+        }, 600);
+
+      });
+    });
+
+  </script>
+
+</body>
+</html>
