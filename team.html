@@ -1,78 +1,359 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="LOGO MASTER-ICON-1.png">
-  <link rel="apple-touch-icon" href="LOGO MASTER-ICON-1.png">
-  <title>Team Roster | R9 International</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(80,0,0,0.55)
-      ), url('./bg-r9.png');
-      background-size: cover;
-      background-position: center;
-      filter: blur(4px);
-      transform: scale(1.05);
-      z-index: -1;
-    }
+<title>Team Roster | R9 International</title>
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+<link rel="icon" type="image/png" href="LOGO MASTER-ICON-1.png">
+<script src="https://cdn.tailwindcss.com"></script>
 
-    .animate-page {
-      animation: fadeIn 0.6s ease-out;
-    }
-  </style>
+<style>
+
+/* Background */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(80,0,0,0.55)),
+    url('./bg-r9.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  transform: scale(1.05);
+  z-index: -1;
+}
+
+/* Fade animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+</style>
+
 </head>
 
-<body class="min-h-screen flex items-center justify-center bg-transparent text-white px-4">
+<body class="text-white px-4 py-10">
 
-  <div class="w-full max-w-xl text-center px-6 py-10 bg-black/60 backdrop-blur-md rounded-2xl shadow-2xl animate-page">
+<div id="page-card"
+class="w-full max-w-7xl mx-auto
+bg-black/70 backdrop-blur-md
+rounded-3xl shadow-2xl
+p-5 sm:p-8 animate-page">
 
-    <!-- Logo -->
-    <div class="mb-6">
-      <img src="LOGO MASTER-ICON-1.png"
-           alt="R9 Logo"
-           class="w-44 sm:w-52 md:w-64 h-auto mx-auto drop-shadow-2xl" />
-    </div>
+<!-- TITLE -->
 
-    <!-- Title -->
-    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-wide mb-4">
-      TEAM ROSTER
-    </h1>
+<div class="text-center mb-8">
 
-    <!-- Coming Soon Text -->
-    <p class="text-lg text-gray-300 mb-8">
-      Coming Soon
-    </p>
+<p class="text-xs tracking-[0.35em]
+text-red-400 uppercase">
 
-    <p class="text-sm text-gray-400 mb-10">
-      Our competitive lineup is currently being prepared. Stay tuned for updates.
-    </p>
+Official Lineup
 
-    <!-- Back Button -->
-    <a href="/"
-       class="inline-block bg-black hover:bg-red-700 transition duration-150 rounded-2xl px-6 py-3 font-semibold shadow-lg transform active:scale-95">
-      ← Back to Lobby
-    </a>
+</p>
 
-  </div>
+<h1 class="text-4xl sm:text-5xl
+font-extrabold tracking-wide mt-3">
+
+ETERNAL REIGN
+
+</h1>
+
+</div>
+
+<!-- FULL BANNER -->
+
+<div class="mb-10">
+
+<img
+src="roster/roster-banner.png"
+class="w-full
+h-auto
+object-contain
+rounded-2xl
+shadow-2xl"
+/>
+
+</div>
+
+<!-- FULL POSTER GRID -->
+
+<div class="grid
+grid-cols-1
+sm:grid-cols-2
+lg:grid-cols-3
+gap-6">
+
+<!-- PLAYER TEMPLATE -->
+
+<!-- VEE -->
+
+<div class="group
+relative
+overflow-hidden
+rounded-3xl
+shadow-2xl
+transition
+hover:-translate-y-1
+hover:shadow-red-500/40">
+
+<div class="relative
+aspect-[4/5]">
+
+<img
+src="roster/vee.png"
+class="w-full
+h-full
+object-cover
+object-top
+transition
+duration-300
+group-hover:scale-105">
+
+<div class="absolute
+inset-0
+bg-gradient-to-t
+from-black
+via-black/20
+to-transparent">
+
+</div>
+
+<!-- ROLE BADGE -->
+
+<div class="absolute
+top-4
+left-4
+bg-emerald-500/20
+text-emerald-300
+text-xs
+font-semibold
+px-3
+py-1
+rounded-full">
+
+JUNGLER
+
+</div>
+
+<!-- NAME -->
+
+<div class="absolute
+bottom-5
+left-0
+right-0
+text-center">
+
+<h2 class="text-2xl
+font-extrabold">
+
+Vee
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- NIRVANA -->
+
+<div class="group relative overflow-hidden rounded-3xl shadow-2xl transition hover:-translate-y-1 hover:shadow-red-500/40">
+
+<div class="relative aspect-[4/5]">
+
+<img src="roster/nirvana.png"
+class="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105">
+
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+<div class="absolute top-4 left-4 bg-violet-500/20 text-violet-300 text-xs font-semibold px-3 py-1 rounded-full">
+
+MIDDLE LANE
+
+</div>
+
+<div class="absolute bottom-5 left-0 right-0 text-center">
+
+<h2 class="text-2xl font-extrabold">
+
+Nirvana
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- XZHENG -->
+
+<div class="group relative overflow-hidden rounded-3xl shadow-2xl transition hover:-translate-y-1 hover:shadow-red-500/40">
+
+<div class="relative aspect-[4/5]">
+
+<img src="roster/xzheng.png"
+class="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105">
+
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+<div class="absolute top-4 left-4 bg-sky-500/20 text-sky-300 text-xs font-semibold px-3 py-1 rounded-full">
+
+ROAMER
+
+</div>
+
+<div class="absolute bottom-5 left-0 right-0 text-center">
+
+<h2 class="text-2xl font-extrabold">
+
+XZheng
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- INVINCIBLE -->
+
+<div class="group relative overflow-hidden rounded-3xl shadow-2xl transition hover:-translate-y-1 hover:shadow-red-500/40">
+
+<div class="relative aspect-[4/5]">
+
+<img src="roster/invincible.png"
+class="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105">
+
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+<div class="absolute top-4 left-4 bg-amber-500/20 text-amber-300 text-xs font-semibold px-3 py-1 rounded-full">
+
+FARM LANE
+
+</div>
+
+<div class="absolute bottom-5 left-0 right-0 text-center">
+
+<h2 class="text-2xl font-extrabold">
+
+inv1nciblE
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- KV2 -->
+
+<div class="group relative overflow-hidden rounded-3xl shadow-2xl transition hover:-translate-y-1 hover:shadow-red-500/40">
+
+<div class="relative aspect-[4/5]">
+
+<img src="roster/kv2.png"
+class="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105">
+
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+<div class="absolute top-4 left-4 bg-red-500/20 text-red-300 text-xs font-semibold px-3 py-1 rounded-full">
+
+CLASH LANE
+
+</div>
+
+<div class="absolute bottom-5 left-0 right-0 text-center">
+
+<h2 class="text-2xl font-extrabold">
+
+KV2
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BACK BUTTON -->
+
+<div class="mt-10 flex justify-center">
+
+<a
+href="/"
+class="bg-black hover:bg-red-700
+transition duration-150
+rounded-2xl
+px-6
+py-3
+font-semibold
+shadow-lg
+transform
+hover:scale-105
+active:scale-95">
+
+← Back to Lobby
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+const card = document.getElementById("page-card");
+
+document.querySelectorAll("a").forEach(link => {
+
+link.addEventListener("click", function(e) {
+
+if (this.target === "_blank") return;
+
+e.preventDefault();
+
+card.classList.add("fade-out");
+
+setTimeout(() => {
+
+window.location.href = this.href;
+
+}, 250);
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
