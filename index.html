@@ -93,6 +93,15 @@
 
     </div>
 
+    <!-- Tournament Registration Button -->
+    <div class="mt-6">
+      <a id="tournament-registration" href="https://forms.gle/mWUyx9xRzovBvCui9" target="_blank"
+         class="flex flex-col items-center justify-center bg-blue-700 hover:bg-blue-800 transition duration-300 rounded-2xl py-5 font-bold shadow-lg transform hover:scale-105">
+        <span class="text-lg tracking-wide">TOURNAMENT REGISTRATION</span>
+        <span class="text-xs text-gray-200 mt-1">Register your team for tournament</span>
+      </a>
+    </div>
+
     <!-- Competitive Team Recruitment Button -->
     <div class="mt-6">
       <a id="competitive-team" href="https://forms.gle/4Yik3MwP4cYiTmHG8" target="_blank"
@@ -131,7 +140,7 @@
         statusEl.className = "inline-block px-4 py-2 text-sm font-semibold rounded-full bg-red-600/20 text-red-400 border border-red-500/30";
       }
 
-      const openCompetitive = true;
+      const openCompetitive = false;
 
       if (!openCompetitive) {
         const btn = document.getElementById("competitive-team");
