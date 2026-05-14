@@ -104,10 +104,10 @@
 
     <!-- Competitive Team Recruitment Button -->
     <div class="mt-6">
-      <a id="competitive-team" href="https://forms.gle/4Yik3MwP4cYiTmHG8" target="_blank"
+      <a id="competitive-team" href="https://challonge.com/ReignitionS5" target="_blank"
          class="flex flex-col items-center justify-center bg-red-700 hover:bg-red-800 transition duration-300 rounded-2xl py-5 font-bold shadow-lg transform hover:scale-105">
-        <span class="text-lg tracking-wide">COMPETITIVE TEAM RECRUITMENT</span>
-        <span class="text-xs text-gray-200 mt-1">Apply to join our competitive team</span>
+        <span class="text-lg tracking-wide">BRACKET INFORMATION</span>
+        <span class="text-xs text-gray-200 mt-1">Click here for bracket details</span>
       </a>
     </div>
 
@@ -177,13 +177,13 @@
       COMPETITIVE TEAM RECRUITMENT TOGGLE
       =====================================
       */
-      const recruitmentOpen = true;  // ← UBAH INI: true = OPEN, false = CLOSED
+      const recruitmentOpen = false;  // ← UBAH INI: true = OPEN, false = CLOSED
 
       const statusEl = document.getElementById("recruitment-status");
       const competitiveBtn = document.getElementById("competitive-team");
 
       if (!recruitmentOpen) {
-        statusEl.textContent = "Recruitment Status: CLOSED";
+        statusEl.textContent = "Bracket coming soon";
         statusEl.className = "inline-block px-4 py-2 text-sm font-semibold rounded-full bg-red-600/20 text-red-400 border border-red-500/30";
         
         // Disable competitive team button
